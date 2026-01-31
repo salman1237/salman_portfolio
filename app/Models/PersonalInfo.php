@@ -1,0 +1,32 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class PersonalInfo extends Model
+{
+    use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'tagline',
+        'title',
+        'email',
+        'phone',
+        'address',
+        'linkedin',
+        'github',
+        'codeforces',
+        'website',
+        'photo',
+        'resume_pdf',
+        'bio',
+        'date_of_birth',
+    ];
+
+    protected $casts = [
+        'date_of_birth' => 'date',
+    ];
+}

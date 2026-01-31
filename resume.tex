@@ -1,0 +1,184 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Salman Ahmed CV},
+    pdfauthor={Salman Ahmed},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\columnsep}{0cm}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{0.5pt}\titlerule]
+
+\renewcommand\labelitemi{$\circ$}
+
+\newenvironment{highlights}{
+\begin{itemize}[topsep=0.05cm,itemsep=0pt,parsep=0pt,leftmargin=0.4cm+10pt]
+}{\end{itemize}}
+
+\newenvironment{onecolentry}{
+\begin{adjustwidth}{0.2cm}{0.2cm}
+}{\end{adjustwidth}}
+
+\newenvironment{twocolentry}[2][]{
+\onecolentry
+\def\secondColumn{#2}
+\setcolumnwidth{\fill,4.5cm}
+\begin{paracol}{2}
+}{
+\switchcolumn \raggedleft \secondColumn
+\end{paracol}
+\endonecolentry
+}
+
+\begin{document}
+
+% ================= HEADER =================
+\begin{center}
+{\fontsize{24pt}{24pt}\selectfont \textbf{Salman Ahmed}}\\[6pt]
+
+\faMapMarker*~Savar, Dhaka, Bangladesh \quad
+\href{mailto:salmanahmed382.jubair@gmail.com}{\faEnvelope[regular]~salmanahmed382.jubair@gmail.com} \quad
+\faPhone*~(+880) 1879246551\\[6pt]
+
+\href{https://codeforces.com/profile/noob_guy_2033}
+{\faCode~Codeforces} \quad
+\href{https://leetcode.com/u/Salman_2033/}
+{\faLaptopCode~LeetCode} \quad
+\href{https://github.com/salman1237}
+{\faGithub~GitHub} \quad
+\href{https://www.linkedin.com/in/salman-ahmed-5272851a2/}
+{\faLinkedinIn~LinkedIn}
+\end{center}
+
+
+% ================= SKILLS =================
+\section{Skills}
+
+\begin{onecolentry}
+\begin{highlights}
+\item \textbf{Core CS:} Algorithms, Data Structures, Object-Oriented Programming
+\item \textbf{Programming Languages:} C, C++, Java, PHP, Python, JavaScript
+\item \textbf{Web Development:} Laravel, RESTful APIs, MVC Architecture
+\item \textbf{Databases:} MySQL
+\item \textbf{Automation \& AI:} Python Scripting, Task Automation, AI Agents (n8n)
+\item \textbf{Tools \& Platforms:} Git, GitHub
+\end{highlights}
+\end{onecolentry}
+
+
+% ================= COMPETITIVE PROGRAMMING =================
+\section{Competitive Programming}
+
+\begin{onecolentry}
+\begin{highlights}
+\item ICPC Dhaka Regional 2025 onsite — Team: JU\_Odd\_Bits
+\item ICPC Dhaka Regional Preliminary 2023 — Top 8.4\% (210 / 2479), Team: JU\_OneMoreZer0
+\item JU NCPC Preliminary 2023 — 134 / 1099, Team: JU\_S3
+\item JU NCPC Onsite 2023 — 167th, Team: JU\_S3
+\item Breaking Code’23 (MBSTU) — 5th Place
+\item IEEEXtreme 18.0 (2024) — 19th in Bangladesh
+\item IEEEXtreme 17.0 (2023) — 11th in Bangladesh
+\item Solved 1800+ problems across online judges
+\end{highlights}
+\end{onecolentry}
+
+% ================= Experience =================
+\section{Experience}
+
+\begin{twocolentry}{\textit{Sept 2025 – Feb 2026}}
+\textbf{Software Engineer Intern}
+\end{twocolentry}
+\begin{onecolentry}
+\textit{Campus365, Dhaka, Bangladesh}
+\begin{highlights}
+\item Built and maintained production-ready Laravel applications using MVC architecture and MySQL
+\item Developed RESTful APIs, managed database migrations, and optimized queries for performance
+\item Automated workflows and data-processing tasks using Python scripts
+\item Designed AI automation agents with n8n, integrating APIs and LLM-based workflows
+\end{highlights}
+\end{onecolentry}
+
+
+% ================= PROJECTS =================
+\section{Projects}
+
+\begin{twocolentry}{Laravel • Full Stack}
+\textbf{Laravel Portfolio System} \\
+\href{https://github.com/salman1237/laravel_portfolio}{\faGithub~GitHub} \quad
+\href{https://ceo.campus365.pro/}{\faExternalLink*~Live Demo}
+\end{twocolentry}
+
+\begin{onecolentry}
+\begin{highlights}
+\item Developed a full-stack Laravel-based portfolio system with modern responsive UI
+\item Built an admin dashboard with full CRUD functionality for managing portfolio content
+\item Implemented dynamic, ATS-friendly CV PDF generation using Laravel DomPDF
+\item Technologies: Laravel, PHP 8.2+, TailwindCSS, MySQL, Blade
+\end{highlights}
+\end{onecolentry}
+
+\vspace{0.15cm}
+
+\begin{twocolentry}{Web Application}
+\textbf{Examination Application Processing System} \\
+\href{https://github.com/salman1237/Examination-Application-Processing-System}{\faGithub~GitHub Repository}
+\end{twocolentry}
+
+\begin{onecolentry}
+\begin{highlights}
+\item Online university exam application system with secure fee payment and automated admit card generation
+\item Technologies: HTML, CSS, JavaScript, PHP, MySQL
+\end{highlights}
+\end{onecolentry}
+
+
+% ================= EDUCATION =================
+\section{Education}
+
+\begin{twocolentry}{\textit{Feb 2022 – Present}}
+\textbf{Institute of Information Technology, Jahangirnagar University}
+\end{twocolentry}
+\begin{onecolentry}
+Bachelor of Science in Information \& Communication Technology
+\end{onecolentry}
+
+\end{document}
